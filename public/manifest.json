@@ -1,0 +1,18 @@
+{
+  "name": "Narrateur Loup Garou",
+  "short_name": "Loup Garou",
+  "description": "Application narrateur pour distribuer les rôles du Loup Garou.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b0e12",
+  "theme_color": "#0b0e12",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

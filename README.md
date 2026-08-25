@@ -114,4 +114,4 @@ Toutes les données sont stockées uniquement dans le navigateur via `localStora
 
 ## Licence
 
-Projet personnel. Ajoute une licence ici si tu souhaites autoriser explicitement la réutilisation du code.
+Projet personnel. 

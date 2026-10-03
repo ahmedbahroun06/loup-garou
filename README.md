@@ -1,67 +1,67 @@
-# 🐺 Loup Garou App
+# 🐺 Werewolf App
 
-Une application web mobile pensée pour le narrateur d'une partie de **Loup-Garou**. Elle génère une composition de rôles, permet de l'ajuster avant la partie, distribue les rôles de façon privée et conserve un récapitulatif après la partie.
+A mobile web application designed for the narrator of a **Werewolf** game. It generates a role composition, lets you adjust it before the game, distributes roles privately, and keeps a recap after the game.
 
-L'application est une **PWA** : elle peut être installée depuis un navigateur compatible et utilisée comme une application sur téléphone.
+The application is a **PWA**: it can be installed from a compatible browser and used just like a phone app.
 
-## Démo en ligne
+## Online Demo
 
-➡️ [Ouvrir Narrateur Loup Garou](https://loupgarou123.netlify.app/)
+➡️ [Open Werewolf Narrator](https://loupgarou123.netlify.app/)
 
-## Fonctionnalités
+## Features
 
-- Sélection du nombre de joueurs, de **5 joueurs minimum** au nombre de rôles disponibles.
-- Génération automatique avec environ **35 % de Loups-Garous** (arrondi à l'entier le plus proche, avec au moins un loup).
-- Un rôle ne peut être attribué qu'une seule fois dans une même partie.
-- Écran de revue pour consulter les rôles générés et les remplacer avant de commencer.
-- Création de rôles personnalisés : nom, emoji, camp et description.
-- Distribution privée, joueur par joueur, avec révélation au toucher.
-- Attribution aléatoire du titre de **Capitaine**.
-- Ordre différent et aléatoire entre les écrans de revue, de distribution et de récapitulatif afin d'éviter de déduire l'ordre des rôles.
-- Récapitulatif final persistant même après fermeture de l'application.
-- Thème sombre et clair.
-- Manifest et service worker pour une expérience PWA installable.
+* Select the number of players, from a **minimum of 5 players** up to the number of available roles.
+* Automatic generation with approximately **35% Werewolves** (rounded to the nearest integer, with at least one wolf).
+* A role can only be assigned once per game.
+* Review screen to check the generated roles and replace them before starting.
+* Custom role creation: name, emoji, faction, and description.
+* Private distribution, player by player, with tap-to-reveal.
+* Random assignment of the **Captain** title.
+* Different and randomized order between the review, distribution, and recap screens to prevent role order deduction.
+* Final summary that persists even after closing the app.
+* Dark and light theme.
+* Manifest and service worker for an installable PWA experience.
 
-## Rôles inclus
+## Included Roles
 
-### Village et autres camps
+### Village and Other Factions
 
-Voyante, Sorcière, Protecteur, Chasseur, Alien, Corbeau, Pute, Enfant sauvage, Ours, Voleur, Barbie, Ange, Berger, Feurgeron, Ancien, Détective, Singe, Petite Fille, Cavalier, L'Institutrice et Chien-Loup.
+Seer, Witch, Bodyguard, Hunter, Alien, Crow, Prostitute, Wild Child, Bear, Thief, Barbie, Angel, Shepherd, Blacksmith, Elder, Detective, Monkey, Little Girl, Rider, Schoolteacher, and Wolf-Hound.
 
-### Loups-Garous
+### Werewolves
 
-Père infecté, Loup bleu, Loup noir et Loup simple.
+Infected Father of Wolves, Blue Wolf, Black Wolf, and Simple Wolf.
 
-Les descriptions des rôles sont visibles pendant la revue et lors de leur distribution. Les rôles personnalisés peuvent compléter cette liste.
+Role descriptions are visible during review and distribution. Custom roles can complement this list.
 
-## Parcours d'une partie
+## Game Flow
 
-1. **Nouvelle partie** — Choisir le nombre de joueurs et générer les rôles.
-2. **Composition** — Vérifier la sélection, consulter les informations, remplacer un rôle ou ajouter un rôle personnalisé.
-3. **Distribution** — Faire défiler les joueurs. Chacun révèle son rôle sur l'écran, puis passe l'appareil au joueur suivant.
-4. **Récap narrateur** — Retrouver la composition finale dans un ordre à nouveau mélangé.
+1. **New Game** — Choose the number of players and generate the roles.
+2. **Composition** — Verify the selection, review information, replace a role, or add a custom role.
+3. **Distribution** — Pass through the players. Each reveals their role on the screen, then hands the device to the next player.
+4. **Narrator Recap** — Find the final composition in a newly randomized order.
 
-Le bouton discret « Nouvelle partie » du récapitulatif remet la partie à zéro tout en conservant les rôles personnalisés et le thème choisi.
+The discreet "New Game" button in the recap resets the game while keeping custom roles and the chosen theme.
 
-## Stack technique
+## Tech Stack
 
-| Technologie | Usage |
+| Technology | Usage |
 | --- | --- |
-| [React 19](https://react.dev/) | Interface utilisateur et état de l'application |
-| [TypeScript](https://www.typescriptlang.org/) | Typage et fiabilité du code |
-| [Vite](https://vite.dev/) | Serveur de développement et build de production |
-| [Oxc](https://oxc.rs/) / Oxlint | Vérification statique du code |
-| Web App Manifest + Service Worker | Installation et fondations PWA |
-| `localStorage` | Sauvegarde locale de la partie, des rôles personnalisés et du thème |
+| [React 19](https://react.dev/) | User interface and application state |
+| [TypeScript](https://www.typescriptlang.org/) | Code typing and reliability |
+| [Vite](https://vite.dev/) | Development server and production build |
+| [Oxc](https://oxc.rs/) / Oxlint | Static code analysis |
+| Web App Manifest + Service Worker | Installation and PWA foundation |
+| `localStorage` | Local storage for the game, custom roles, and theme |
 
-Le projet n'utilise ni base de données ni compte utilisateur : les données restent dans le navigateur de l'appareil du narrateur.
+The project uses neither a database nor user accounts: data remains in the narrator's device browser.
 
-## Démarrer le projet localement
+## Running the Project Locally
 
-### Prérequis
+### Prerequisites
 
-- [Node.js](https://nodejs.org/) 20 ou supérieur
-- npm (fourni avec Node.js)
+* [Node.js](https://nodejs.org/) 20 or higher
+* npm (bundled with Node.js)
 
 ### Installation
 
@@ -69,49 +69,52 @@ Le projet n'utilise ni base de données ni compte utilisateur : les données res
 git clone https://github.com/ahmedbahroun06/loup-garou.git
 cd loup-garou
 npm install
+
 ```
 
-### Commandes disponibles
+### Available Commands
 
 ```bash
-# Lancer l'application en développement
+# Run the application in development mode
 npm run dev
 
-# Créer la version de production dans le dossier dist/
+# Create the production build in the dist/ folder
 npm run build
 
-# Vérifier le code
+# Check the code
 npm run lint
 
-# Prévisualiser la version de production
+# Preview the production build
 npm run preview
+
 ```
 
-## Déploiement
+## Deployment
 
-Le projet est un site statique. Après avoir exécuté `npm run build`, il suffit de publier le dossier `dist/` sur un hébergeur statique, par exemple Netlify, Vercel, Cloudflare Pages ou GitHub Pages.
+The project is a static site. After running `npm run build`, simply publish the `dist/` folder to a static hosting provider such as Netlify, Vercel, Cloudflare Pages, or GitHub Pages.
 
-Pour Netlify Drop : se connecter à Netlify, ouvrir la page de dépôt manuel, puis déposer le dossier `dist/`. Un nom de site personnalisé permet d'obtenir une adresse lisible telle que `narrateur-loup-garou.netlify.app`.
+For Netlify Drop: log in to Netlify, open the manual deploy page, then drop the `dist/` folder. A custom site name allows you to get a readable address such as `narrateur-loup-garou.netlify.app`.
 
-## Structure du projet
+## Project Structure
 
 ```text
 src/
-├── components/     # Modales et composants réutilisables
-├── data/           # Catalogue des rôles et libellés de camps
-├── lib/            # Génération, mélange et persistance locale
-├── screens/        # Les quatre écrans du parcours de jeu
-├── App.tsx         # Orchestration de l'état et navigation
-└── types.ts        # Types TypeScript partagés
+├── components/     # Modals and reusable components
+├── data/           # Role catalog and faction labels
+├── lib/            # Generation, shuffling, and local persistence
+├── screens/        # The four screens of the game flow
+├── App.tsx         # State orchestration and navigation
+└── types.ts        # Shared TypeScript types
 public/
-├── manifest.json   # Métadonnées PWA
+├── manifest.json   # PWA metadata
 └── sw.js           # Service worker
+
 ```
 
-## Données et confidentialité
+## Data and Privacy
 
-Toutes les données sont stockées uniquement dans le navigateur via `localStorage`. Effacer les données du site dans le navigateur supprimera la partie en cours, les rôles personnalisés et le thème enregistré.
+All data is stored exclusively in the browser via `localStorage`. Clearing the site's data in the browser will delete the current game, custom roles, and saved theme.
 
-## Licence
+## License
 
-Projet personnel. 
+Personal project.
